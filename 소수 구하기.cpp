@@ -1,18 +1,16 @@
 #include<stdio.h>
 void main() {
-	int sum = 0;
-	int j=0;
-	for (int i = 110; i <= 10000; i++) {
-		
-		
-		for (j = 110; j <= i; j++) {
-			if (i % j == 0)
-			{
-				break;
-			}
-		}
-		if (i == j)
-			sum = sum + i;
+	int N, i;
+	float Ctem, Ftem;
+
+	printf("type a number:");
+	scanf_s("%d", &N);
+
+	for (i = 1; i <= N; i++) {
+		printf("type a Celsius degree:");
+		scanf_s("%f", &Ctem);
+
+		Ftem = (9.0 / 5.0) * Ctem + 32.0;
+		printf("fahren degree: %f", Ftem);
 	}
-	printf("sum from 110 to 10000 = %d ", sum);
 }
